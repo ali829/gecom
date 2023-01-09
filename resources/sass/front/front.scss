@@ -1,0 +1,635 @@
+@tailwind base;
+
+@tailwind components;
+
+/* Reponsive */
+@screen sm {
+
+}
+
+@screen md {
+
+}
+
+@screen lg {
+
+}
+@import '_theme_ground_3';
+
+//body
+
+
+/* nav bar style  */
+.menu  div {
+  width: 20px;
+  height: 3px;
+  background-color: $color-text-item;
+  margin: 6px 0;
+}
+.menu + .sidenav:target {
+  background-color: $BG;
+  overflow-x: visible;
+  width: 100%;
+  display:block;
+}
+.sidenav:target {
+  overflow-x: hidden;
+  width: 0;
+}
+/* The side navigation menu */
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  overflow-x: hidden; 
+  padding-top: 60px;
+  transition: 0.5s; 
+}
+
+/* The navigation menu links */
+.sidenav a {
+  color: $color-text-item;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* nav bar style  */
+
+
+/* sub style  */
+.nosub a
+{
+overflow: hidden;
+max-height: 0;
+transition: .8s ;
+}
+
+.arrow
+{
+  transform: rotateX(-180deg);
+}
+/* sub style  */
+
+/* icon rotation  */
+.iconenext
+{
+  transform: rotate(-90deg);
+}
+.iconeprev
+{
+  transform: rotate(90deg);
+}
+/* icon rotation  */
+
+
+
+/* cart animation  */
+.animecarte
+{
+  transform: translateY(0);
+  transition: .3s ease-out;
+}
+.animecarte:hover{
+  transform: translateY(-3%);
+}
+
+/* cart animation  */
+
+/* choix couleur product */
+    /* The container */
+    .container {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      font-size: 5px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      }
+      /* Hide the browser's default radio button */
+      .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      }
+      /* Create a custom radio button */
+      .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      }
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+      }
+      /* When the radio button is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+      }
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      }
+      /* Show the indicator (dot/circle) when checked */
+      .container input:checked ~ .checkmark:after {
+      display: block;
+      }
+      /* Style the indicator (dot/circle) */
+      .container .checkmark:after {
+          top: 9px;
+          left: 9px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: white;
+      }
+
+      .color-input
+      {
+        @apply mx-1;
+      }
+
+      // tabulation style 
+      .tabcontent
+{ 
+  display: none;
+}
+.tab
+{
+  background-color: inherit;
+}
+
+.tab.active
+{
+ 
+}
+
+
+
+
+.active::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 4px;
+ /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, $Border, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, $Border, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 100px;
+  bottom: 0%;
+  left: 0%;
+ 
+  transition: all 500ms ease;
+}
+
+.active:focus::after {
+  left: 0%;
+  width: 100%;
+}
+.tabhover::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 4px;
+    /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, $Border #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, $Border, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 100px;
+  bottom: 0%;
+  left: 0%;
+  transition: all 500ms ease;
+}
+.tabhover:hover::after {
+  left: 0%;
+  width: 100%;
+}
+ .starscol 
+ {
+   color: #ffffff;
+ }
+
+/* star color  */
+
+.stars
+{
+  color: gold;
+}
+      // end of tabulation style 
+
+      // comment bouble 
+.triangle
+{
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-top-width: 13px;
+  border-bottom-width: 0px;
+  border-right: 13px solid #cbd5e0;
+}
+.trianglesm
+{
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-top-width: 13px;
+  border-bottom-width: 0px;
+  border-right: 13px solid #cbd5e0; 
+  transform: rotateX(-180deg);
+}
+      // comment bouble 
+      //  titres
+      .grand-titre
+      {
+        color: $Titre;
+        @apply  text-xl  font-semibold uppercase whitespace-no-wrap; 
+      }
+      .grand-titre-border 
+      {
+        border-color: $Border;
+        @apply border-b border-4  w-full mx-4;
+      }
+      .product-title
+      {
+        
+       @apply text-sm font-semibold overflow-x-hidden;
+      }
+      .link-footer
+      {
+        @apply font-semibold text-sm;
+      }
+      .link-footer:hover
+      {
+        @apply underline;
+      }
+      .prix-slot 
+      {
+        
+        @apply text-base  font-bold ;
+      }
+      .total-slot 
+      {
+        @apply font-bold text-xl ;
+      }
+      // titres 
+
+      .nav-bar
+      {
+        background-color: $BG ;
+      }
+
+      // items 
+      .items-nav {
+        color: $color-text-item;
+        @apply flex items-center px-1;
+        
+      }
+      // product 
+      .cards
+      {
+        border-color: $Border;
+        background-color: $color-text-item;
+        @apply flex justify-center  border my-2 mx-0 ;
+      }
+
+      .product-card
+      {
+        border-color: $Border;
+        @apply  w-1/4 mx-2 relative  border ;
+      }
+      .product-btn-shopping
+      {
+        background-color: $item-bg ;
+        color: $color-text-item;
+        @apply rounded-full px-2
+        flex items-center h-8 w-8 shadow-md;
+      }
+      .product-btn-favorie
+      {
+        @apply absolute top-0 right-0 text-center rounded-full py-1  bg-gray-100 text-red-600 border border-red-500 h-8 w-8 m-2;
+      }
+      // product 
+      // button
+      .buttons 
+      {
+        background-color: $item-bg;
+        color: $color-text-item;
+        @apply flex items-center shadow-lg px-2 py-1 text-center rounded mx-1;
+      }
+      .buttons:hover
+      {
+        background-color: $item-hover;
+      }
+      .buttons:focus
+      {
+        @apply outline-none;
+      }
+      .buttons-second
+      {
+        @apply flex items-center bg-transparent  px-2 py-1 text-center rounded ;
+      }
+      .buttons-second:hover
+      {
+       background-color: $item-hover;
+       color: $color-text-item;
+      }
+
+      .btn-icon
+      {
+        @apply mr-2;
+      }
+      // button
+
+
+
+
+      
+
+      // cnx form style 
+      .con
+{
+  display: none;
+}
+      .display
+{
+  display: block;
+}
+
+.label-form
+{
+  @apply block text-gray-700 text-sm font-semibold my-1;
+}
+.input-form
+{
+  @apply border-b-2 text-sm font-semibold py-1 px-3 text-gray-700 leading-tight mx-2 my-1;
+}
+.input-form
+{
+  @apply border-2 rounded text-sm font-semibold py-1 px-3 text-gray-700 leading-tight mx-2 my-1;
+}
+
+      // cnx form style 
+
+      // newsletter
+.news-div
+{
+  background-color: $BG ;
+}
+
+// separator
+.separator-border
+{
+  background-color: $Border;
+  @apply  py-1;
+}
+
+//category
+.category-slot
+{
+  background-color: $item-bg;
+  color: $color-text-item;
+  @apply w-1/6 text-sm  my-2 static left-0 shadow-lg;
+}
+.accordion div
+{
+  height:0;
+  transform: scaleY(0);
+}
+.accordion div.visub{
+  height: 100%;
+  animation: slideInDown  .4s ease-out;
+  transform: scaleY(1);
+}
+.visubarrow
+{
+  transform: rotate(-90deg);
+  transition: 1s ease-out;
+}
+.visubcolor
+{
+   background-color: $item-hover ;
+}
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -30%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+// pagination
+.active-pagination
+{
+background-color: $item-hover;
+color: $color-text-item;
+}
+.items-pagination
+{
+ @apply h-8 w-8  rounded-full  mx-1 cursor-pointer;
+}
+.items-pagination:focus
+{
+  outline: none;
+}
+.arrows-pagination
+{
+  background-color: $item-bg;
+  color: $color-text-item;
+ @apply h-8 w-8  rounded-full   text-3xl;
+}
+// pagination
+// sm style 
+.grand-titre-sm
+{
+  color: $Titre;
+  @apply text-center text-xs; 
+}
+.product-title-sm
+{
+  
+  @apply text-xs font-semibold whitespace-no-wrap ;
+}
+.items-nav-sm
+{
+  color: $color-text-item;
+  @apply flex items-start px-1;
+}
+.sm-shopping-btn
+{
+  background-color: $item-bg;
+  color: $color-text-item;
+ @apply rounded-full px-1
+  flex items-center h-5 w-5  shadow-md;
+}
+.sm-btn-favorie
+  {
+    @apply absolute top-0 right-0 text-center rounded-full py-1  border bg-gray-100 text-red-600 border-gray-500 h-6    w-6 text-sm m-1;
+  }
+// sm style 
+
+
+// categories image hover 
+/* Colorize-zoom Container */
+.animecat  .img-cat{
+  transition: transform .5s, filter 1.5s ease-in-out;
+  filter: grayscale(0%);
+  transition: .3s;
+}
+
+/* The Transformation */
+.animecat:hover .img-cat {
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
+// hover div 
+.animecat .absolute-div
+{
+  background-color: $item-bg;
+width: 0;
+  transition: width .4s ease-in;
+ @apply absolute opacity-75  top-0 right-0 h-full; 
+  
+}
+.animecat:hover .absolute-div
+{
+  width: 100%;
+}
+.animecat .grand-titre-cat
+{
+  color: $color-text-item;
+  transition: .4s ease-out;
+  @apply text-xl opacity-0  font-semibold uppercase whitespace-no-wrap;
+}
+.animecat:hover .grand-titre-cat
+{
+  @apply opacity-100;
+}
+// categories image hover 
+
+.scroller {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+  scrollbar-color:  $item-bg $color-text-item;
+  scrollbar-width: thin;
+}
+
+.empty-cat-icon
+{
+  color:  $item-bg;
+  @apply text-6xl;
+}
+
+// loader style 
+
+#content{
+  visibility: hidden;
+}
+.loader>span{
+  font-size: 100px;
+  animation: flip 2.6s infinite linear;
+  transform-origin: 0% 70%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: $item-hover;
+}
+@keyframes  flip{
+  35%{
+      transform: rotateX(360deg);
+  }
+  100%{
+      transform: rotateX(360deg);
+  }
+  
+}
+.loader>span:nth-child(even){
+  background-color:  $BG;
+}
+.loader>span:nth-child(2){
+  animation-delay: .3s;
+}
+.loader>span:nth-child(3){
+  animation-delay: .6s;
+}
+.loader>span:nth-child(4){
+  animation-delay: .9s;
+}
+.loader>span:nth-child(5){
+  animation-delay: 1.2s;
+}
+.loader>span:nth-child(6){
+  animation-delay: 1.5s;
+}
+.loader>span:nth-child(7){
+  animation-delay: 1.8s;
+}
+// loader style 
+
+
+// payement style 
+.container-radio   span {
+  transition: background .2s,  transform .2s;
+}
+
+.container-radio:hover span,
+.container-radio   p:hover span{
+transform: scale(1.2);
+} 
+
+.method-pay-check:checked ~  span {
+background-color:$item-hover; //bg-blue
+box-shadow: 0px 0px 0px 2px white inset;
+}
+
+.method-pay-check:checked ~ p{
+ color:$Titre; //text-blue
+}
+
+
+
+// payement style 
+@tailwind utilities;
+
+      
+
+
+
+ 
+
+

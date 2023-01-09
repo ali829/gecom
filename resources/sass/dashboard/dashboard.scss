@@ -1,0 +1,122 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp';
+
+@import 'https://fonts.googleapis.com/css?family=Nunito:400,700,800';
+
+.nunito {
+    font-family: 'nunito', font-sans;
+}
+
+/* */
+.ease-in {
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-out {
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-fastest {
+    transition-duration: 75ms;
+}
+
+.transition-faster {
+    transition-duration: 100ms;
+}
+
+.transition-fast {
+    transition-duration: 150ms;
+}
+
+.transition-medium {
+    transition-duration: 200ms;
+}
+
+.transition-slow {
+    transition-duration: 300ms;
+}
+
+.transition-slower {
+    transition-duration: 500ms;
+}
+
+.transition-slowest {
+    transition-duration: 700ms;
+}
+
+.transition-all {
+    transition-property: all;
+}
+
+.transition-opacity {
+    transition-property: opacity;
+}
+
+.transition-transform {
+    transition-property: transform;
+}
+
+.focus-visible.focus-visible\:underline {
+    text-decoration: underline;
+}
+
+#side-bar
+{
+transition: .4s ease-out;
+}
+ .hide
+{
+    transform: translateX(-100%);
+}
+ .show
+{
+    transform: translateX(0px);
+}
+.slideicon
+{
+    transform: rotate(-180deg);
+    transition: .4s;
+}
+
+.zindex {
+    z-index: 8000;
+}
+.invalid-feedback {
+    @apply text-red-600 text-xs;
+}
+
+/* nav bar user notif */
+.dis {
+    display: block;
+}
+.hid {
+    display: none;
+}
+
+// hide scroolbar
+.hide-scrollbar::-webkit-scrollbar
+{
+    width: 0;
+}
+// hide scroolbar
+
+
+// switch off on
+.switchbtn
+{
+    transition: all .4s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.on{
+    transform: translateX(100%);
+}
+// switch off on
+
